@@ -12,8 +12,9 @@ header {
 }
 
 .banner {
-    background-color: #007BFF;
-    color: white;
+    background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     padding: 50px 0;
 }
@@ -78,4 +79,78 @@ nav a:hover {
 
 .contact-form button:hover {
     background-color: #0056b3;
+}
+
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages-list li {
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-list li {
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-content h2 {
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.feature h3 {
+    margin-top: 0;
 }

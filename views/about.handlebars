@@ -1,11 +1,14 @@
-<h2>Messages</h2>
-<ul>
+<h2>About Us</h2>
+<p>Welcome to the about page. Here you can find information about our website and the team behind it.</p>
+
+<h3>Messages</h3>
+<ul class="messages-list">
     {{#each messages}}
     <li>
         <strong>{{this.name}}:</strong> {{this.message}}
         <form action="/delete-message" method="POST" style="display:inline;">
             <input type="hidden" name="id" value="{{this.id}}">
-            <button type="submit">X</button>
+            <button type="submit" class="delete-button">X</button>
         </form>
     </li>
     {{/each}}

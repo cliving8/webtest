@@ -54,6 +54,11 @@ app.post('/contact', (req, res) => {
     });
 });
 
+// Services route
+app.get('/services', (req, res) => {
+    res.render('services', { title: 'Services Page' });
+});
+
 // Delete message route
 app.post('/delete-message', (req, res) => {
     const { id } = req.body;
