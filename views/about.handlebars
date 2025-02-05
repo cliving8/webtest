@@ -1,0 +1,12 @@
+<h2>Messages</h2>
+<ul>
+    {{#each messages}}
+    <li>
+        <strong>{{this.name}}:</strong> {{this.message}}
+        <form action="/delete-message" method="POST" style="display:inline;">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit">X</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
