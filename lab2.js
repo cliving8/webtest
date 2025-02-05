@@ -2,16 +2,18 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const { engine: expressHandlebars } = require('express-handlebars');
+const { create } = require('express-handlebars');
 const db = require('./database');
 const app = express();
 
 const port = process.env.PORT || 3000;
 
 // Configure Handlebars view engine
-app.engine('handlebars', expressHandlebars({
+const hbs = create({
     defaultLayout: 'main',
-}));
+    extname: '.handlebars'
+});
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // Serve static files from the 'public' directory
